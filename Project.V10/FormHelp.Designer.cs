@@ -67,7 +67,7 @@
             textBoxInfoLeft_VNS.BackColor = Color.FromArgb(255, 128, 128);
             textBoxInfoLeft_VNS.BorderStyle = BorderStyle.None;
             textBoxInfoLeft_VNS.Font = new Font("Segoe UI", 12F);
-            textBoxInfoLeft_VNS.Location = new Point(24, 204);
+            textBoxInfoLeft_VNS.Location = new Point(26, 170);
             textBoxInfoLeft_VNS.Multiline = true;
             textBoxInfoLeft_VNS.Name = "textBoxInfoLeft_VNS";
             textBoxInfoLeft_VNS.Size = new Size(388, 306);
@@ -78,7 +78,7 @@
             // 
             labelRequest_VNS.AutoSize = true;
             labelRequest_VNS.Font = new Font("Times New Roman", 100F, FontStyle.Bold);
-            labelRequest_VNS.Location = new Point(135, 12);
+            labelRequest_VNS.Location = new Point(135, -22);
             labelRequest_VNS.Name = "labelRequest_VNS";
             labelRequest_VNS.Size = new Size(164, 189);
             labelRequest_VNS.TabIndex = 2;

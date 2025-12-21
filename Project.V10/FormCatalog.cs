@@ -77,6 +77,10 @@ namespace Project.V10
             pictureBoxPerfor_VNS.Visible = false;
             pictureBoxTools_VNS.Visible = false;
 
+            panelBosch_VNS.Visible = false;
+            panelPerfor_VNS.Visible = false;
+            panelTools_VNS.Visible = false;
+
             labelBosch_VNS.Visible = false;
             labelPerfor_VNS.Visible = false;
             labelTools_VNS.Visible = false;
@@ -151,6 +155,10 @@ namespace Project.V10
             textBoxAllCount_VNS.Visible = false;
             labelSecondCatalog_VNS.Visible = false;
             buttonOrder_VNS.Visible = false;
+
+            panelBosch_VNS.Visible = true;
+            panelPerfor_VNS.Visible = true;
+            panelTools_VNS.Visible = true;
 
         }
 

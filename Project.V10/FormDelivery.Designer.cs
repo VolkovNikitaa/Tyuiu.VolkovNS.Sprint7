@@ -63,6 +63,7 @@
             ClientSize = new Size(982, 653);
             Controls.Add(label1);
             Controls.Add(buttonDeliveryHelp);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormDelivery";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Доставка";

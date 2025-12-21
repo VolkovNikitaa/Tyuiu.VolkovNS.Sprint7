@@ -175,6 +175,7 @@
             Controls.Add(textBoxAddress_VNS);
             Controls.Add(textBoxFIO_VNS);
             Controls.Add(labelTopic_VNS);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormAccount";
             Text = "Статус заказа";
             ResumeLayout(false);

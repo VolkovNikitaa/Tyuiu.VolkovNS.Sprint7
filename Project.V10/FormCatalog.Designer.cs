@@ -61,6 +61,9 @@
             buttonShopBosch_VNS = new Button();
             openFileDialogProduct_VNS = new OpenFileDialog();
             buttonOrder_VNS = new Button();
+            panelTools_VNS = new Panel();
+            panelPerfor_VNS = new Panel();
+            panelBosch_VNS = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBoxTools_VNS).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPerfor_VNS).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBosch_VNS).BeginInit();
@@ -70,6 +73,7 @@
             // pictureBoxTools_VNS
             // 
             pictureBoxTools_VNS.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            pictureBoxTools_VNS.BackColor = Color.FromArgb(255, 128, 128);
             pictureBoxTools_VNS.Image = (Image)resources.GetObject("pictureBoxTools_VNS.Image");
             pictureBoxTools_VNS.Location = new Point(68, 225);
             pictureBoxTools_VNS.Name = "pictureBoxTools_VNS";
@@ -82,7 +86,7 @@
             // pictureBoxPerfor_VNS
             // 
             pictureBoxPerfor_VNS.Anchor = AnchorStyles.Bottom;
-            pictureBoxPerfor_VNS.BackColor = Color.Transparent;
+            pictureBoxPerfor_VNS.BackColor = Color.FromArgb(255, 128, 128);
             pictureBoxPerfor_VNS.Image = (Image)resources.GetObject("pictureBoxPerfor_VNS.Image");
             pictureBoxPerfor_VNS.Location = new Point(534, 225);
             pictureBoxPerfor_VNS.Name = "pictureBoxPerfor_VNS";
@@ -95,6 +99,7 @@
             // pictureBoxBosch_VNS
             // 
             pictureBoxBosch_VNS.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            pictureBoxBosch_VNS.BackColor = Color.FromArgb(255, 128, 128);
             pictureBoxBosch_VNS.Image = (Image)resources.GetObject("pictureBoxBosch_VNS.Image");
             pictureBoxBosch_VNS.Location = new Point(1016, 225);
             pictureBoxBosch_VNS.Name = "pictureBoxBosch_VNS";
@@ -112,7 +117,7 @@
             // 
             labelTools_VNS.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             labelTools_VNS.AutoSize = true;
-            labelTools_VNS.BackColor = Color.Transparent;
+            labelTools_VNS.BackColor = Color.FromArgb(255, 128, 128);
             labelTools_VNS.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             labelTools_VNS.Location = new Point(68, 133);
             labelTools_VNS.Name = "labelTools_VNS";
@@ -124,7 +129,7 @@
             // 
             labelPerfor_VNS.Anchor = AnchorStyles.Bottom;
             labelPerfor_VNS.AutoSize = true;
-            labelPerfor_VNS.BackColor = Color.Transparent;
+            labelPerfor_VNS.BackColor = Color.FromArgb(255, 128, 128);
             labelPerfor_VNS.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             labelPerfor_VNS.Location = new Point(534, 133);
             labelPerfor_VNS.Name = "labelPerfor_VNS";
@@ -136,7 +141,7 @@
             // 
             labelBosch_VNS.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             labelBosch_VNS.AutoSize = true;
-            labelBosch_VNS.BackColor = Color.Transparent;
+            labelBosch_VNS.BackColor = Color.FromArgb(255, 128, 128);
             labelBosch_VNS.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             labelBosch_VNS.Location = new Point(1016, 133);
             labelBosch_VNS.Name = "labelBosch_VNS";
@@ -438,6 +443,33 @@
             buttonOrder_VNS.UseVisualStyleBackColor = false;
             buttonOrder_VNS.Click += buttonOrder_VNS_Click;
             // 
+            // panelTools_VNS
+            // 
+            panelTools_VNS.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            panelTools_VNS.BackColor = Color.FromArgb(255, 128, 128);
+            panelTools_VNS.Location = new Point(49, 105);
+            panelTools_VNS.Name = "panelTools_VNS";
+            panelTools_VNS.Size = new Size(382, 612);
+            panelTools_VNS.TabIndex = 28;
+            // 
+            // panelPerfor_VNS
+            // 
+            panelPerfor_VNS.Anchor = AnchorStyles.Bottom;
+            panelPerfor_VNS.BackColor = Color.FromArgb(255, 128, 128);
+            panelPerfor_VNS.Location = new Point(521, 96);
+            panelPerfor_VNS.Name = "panelPerfor_VNS";
+            panelPerfor_VNS.Size = new Size(411, 612);
+            panelPerfor_VNS.TabIndex = 29;
+            // 
+            // panelBosch_VNS
+            // 
+            panelBosch_VNS.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            panelBosch_VNS.BackColor = Color.FromArgb(255, 128, 128);
+            panelBosch_VNS.Location = new Point(1005, 96);
+            panelBosch_VNS.Name = "panelBosch_VNS";
+            panelBosch_VNS.Size = new Size(405, 612);
+            panelBosch_VNS.TabIndex = 29;
+            // 
             // FormCatalog
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -472,7 +504,11 @@
             Controls.Add(pictureBoxBosch_VNS);
             Controls.Add(pictureBoxPerfor_VNS);
             Controls.Add(pictureBoxTools_VNS);
+            Controls.Add(panelTools_VNS);
             Controls.Add(richTextBoxList_VNS);
+            Controls.Add(panelPerfor_VNS);
+            Controls.Add(panelBosch_VNS);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormCatalog";
             Text = "Каталог";
             WindowState = FormWindowState.Maximized;
@@ -518,5 +554,8 @@
         private Button buttonShopBosch_VNS;
         private OpenFileDialog openFileDialogProduct_VNS;
         private Button buttonOrder_VNS;
+        private Panel panelTools_VNS;
+        private Panel panelPerfor_VNS;
+        private Panel panelBosch_VNS;
     }
 }

@@ -99,6 +99,7 @@
             ClientSize = new Size(982, 653);
             Controls.Add(labelInfoRight_VNS);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormAboutUs";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "О нас";

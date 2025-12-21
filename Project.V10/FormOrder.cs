@@ -43,7 +43,7 @@ namespace Project.V10
                 middlename = textBoxMiddleName_VNS.Text;
                 totalSum = textBoxResult_VNS.Text;
 
-                
+
                 fio = surname + "\t" + name + "\t" + middlename;
                 address = textBoxAddress_VNS.Text;
                 if (radioButtonCardPay_VNS.Checked == true)
@@ -51,14 +51,14 @@ namespace Project.V10
                 else
                     pay = radioButtonOnlinePay_VNS.Text;
                 num = Convert.ToString(rand.Next(1000, 10000));
-                
+
                 FormAccount account = new FormAccount(fio, address, num, pay);
                 account.Show();
                 this.Close();
             }
             else
                 MessageBox.Show("Данные введены неверно", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            string[] inforegister = new string[] { surname, name, middlename, address, num, pay,totalSum, productsOrder};
+            string[] inforegister = new string[] { surname, name, middlename, address, num, pay, totalSum, productsOrder };
             saveFileDialog_VNS.FileName = "Информация о заказах.csv";
             saveFileDialog_VNS.InitialDirectory = @"C: \Users\Nikita\Documents\project";
             saveFileDialog_VNS.ShowDialog();
@@ -82,5 +82,29 @@ namespace Project.V10
             File.AppendAllText(path, str + Environment.NewLine, Encoding.UTF8);
 
         }
+
+        private void textBoxSurname_VNS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z'))
+            {
+                e.Handled = true;
+            }
+            switch (e.KeyChar)
+            {
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                case '0':
+                    e.Handled = true;
+                    return;
+            }
+        }
+
     }
 }

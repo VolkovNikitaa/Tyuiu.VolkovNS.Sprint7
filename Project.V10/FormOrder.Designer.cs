@@ -75,6 +75,7 @@
             textBoxSurname_VNS.Name = "textBoxSurname_VNS";
             textBoxSurname_VNS.Size = new Size(190, 27);
             textBoxSurname_VNS.TabIndex = 1;
+            textBoxSurname_VNS.KeyPress += textBoxSurname_VNS_KeyPress;
             // 
             // textBoxName_VNS
             // 
@@ -82,6 +83,7 @@
             textBoxName_VNS.Name = "textBoxName_VNS";
             textBoxName_VNS.Size = new Size(219, 27);
             textBoxName_VNS.TabIndex = 3;
+            textBoxName_VNS.KeyPress += textBoxSurname_VNS_KeyPress;
             // 
             // textBoxMiddleName_VNS
             // 
@@ -89,6 +91,7 @@
             textBoxMiddleName_VNS.Name = "textBoxMiddleName_VNS";
             textBoxMiddleName_VNS.Size = new Size(236, 27);
             textBoxMiddleName_VNS.TabIndex = 5;
+            textBoxMiddleName_VNS.KeyPress += textBoxSurname_VNS_KeyPress;
             // 
             // textBoxAddress_VNS
             // 
@@ -96,6 +99,7 @@
             textBoxAddress_VNS.Name = "textBoxAddress_VNS";
             textBoxAddress_VNS.Size = new Size(694, 27);
             textBoxAddress_VNS.TabIndex = 7;
+            textBoxAddress_VNS.KeyPress += textBoxSurname_VNS_KeyPress;
             // 
             // labelSurname_VNS
             // 
@@ -211,6 +215,7 @@
             Controls.Add(textBoxName_VNS);
             Controls.Add(textBoxSurname_VNS);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormOrder";
             Text = "Оформление заказа";
             panel1.ResumeLayout(false);

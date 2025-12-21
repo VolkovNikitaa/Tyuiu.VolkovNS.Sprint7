@@ -114,6 +114,7 @@
             Controls.Add(textBoxFAQ_VNS);
             Controls.Add(labelFAQ_VNS);
             Controls.Add(panelBackHelp_VNS);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormHelp";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Справка";

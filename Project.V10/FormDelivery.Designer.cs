@@ -1,0 +1,77 @@
+﻿namespace Project.V10
+{
+    partial class FormDelivery
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDelivery));
+            buttonDeliveryHelp = new Button();
+            label1 = new Label();
+            SuspendLayout();
+            // 
+            // buttonDeliveryHelp
+            // 
+            buttonDeliveryHelp.Font = new Font("Segoe UI", 13F);
+            buttonDeliveryHelp.Location = new Point(702, 539);
+            buttonDeliveryHelp.Name = "buttonDeliveryHelp";
+            buttonDeliveryHelp.Size = new Size(222, 54);
+            buttonDeliveryHelp.TabIndex = 1;
+            buttonDeliveryHelp.Text = "Закрыть";
+            buttonDeliveryHelp.UseVisualStyleBackColor = true;
+            buttonDeliveryHelp.Click += buttonDeliveryHelp_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(12, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(883, 224);
+            label1.TabIndex = 2;
+            label1.Text = resources.GetString("label1.Text");
+            // 
+            // FormDelivery
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(982, 653);
+            Controls.Add(label1);
+            Controls.Add(buttonDeliveryHelp);
+            Name = "FormDelivery";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Доставка";
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+        private Button buttonDeliveryHelp;
+        private Label label1;
+    }
+}

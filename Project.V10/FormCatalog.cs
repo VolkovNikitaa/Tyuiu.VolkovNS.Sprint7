@@ -20,6 +20,8 @@ namespace Project.V10
         public int total = 0;
         static int columns;
         public string products;
+        public string shopCount;
+        public int countShop = 0;
         public FormCatalog()
         {
             InitializeComponent();
@@ -70,7 +72,7 @@ namespace Project.V10
             textBoxBosch_VNS.Text = Convert.ToString(Convert.ToInt32(textBoxBosch_VNS.Text) + 1);
             countBosch = Convert.ToInt32(textBoxBosch_VNS.Text);
         }
-
+        
         private void pictureBoxShopList_VNS_Click(object sender, EventArgs e)
         {
             pictureBoxBosch_VNS.Visible = false;
@@ -121,6 +123,8 @@ namespace Project.V10
             pictureBoxBosch_VNS.Visible = true;
             pictureBoxPerfor_VNS.Visible = true;
             pictureBoxTools_VNS.Visible = true;
+
+
 
             buttonShopPerfor_VNS.Visible = true;
             buttonShopBosch_VNS.Visible = true;
@@ -176,7 +180,7 @@ namespace Project.V10
             textBoxAllCount_VNS.Visible = false;
             labelSecondCatalog_VNS.Visible = false;
             buttonOrder_VNS.Visible = false;
-            
+
         }
 
         private void buttonShopTools_VNS_Click(object sender, EventArgs e)
@@ -184,19 +188,22 @@ namespace Project.V10
 
             rows = ds.LoadFromData(openfile).GetUpperBound(0) + 1;
             columns = ds.LoadFromData(openfile).GetUpperBound(1) + 1;
-
+            int toolsindex;
             string[,] arrayValues = new string[rows, columns];
             arrayValues = ds.LoadFromData(openfile);
             string Tools = arrayValues[0, 0] + "\t\t\t\t\t\t\t\t\t" + Convert.ToString(Convert.ToInt32(arrayValues[0, 1])) + " pуб"
                 + "\t\t\t\t\t\t" + Convert.ToString(countTools) + " шт." + "\t\t\t\t\t\t\t\t" + Convert.ToString(Convert.ToInt32(arrayValues[0, 1]) * countTools) + "руб";
             richTextBoxList_VNS.Text += "\n\t" + Tools + "\n";
             products += arrayValues[0, 0] + " " + Convert.ToString(countTools) + " шт.  ";
-            total += Convert.ToInt32(arrayValues[0, 1]) * countTools;
+            
+            shopCount = textBoxShopCount_VNS.Text;
+            shopCount = Convert.ToString(countPerfor + countTools + countBosch);
+            textBoxShopCount_VNS.Text = shopCount;
+            toolsindex = richTextBoxList_VNS.Lines.Length;
+            total = Convert.ToInt32(arrayValues[2, 1]) * countBosch + Convert.ToInt32(arrayValues[1, 1]) * countPerfor + Convert.ToInt32(arrayValues[0, 1]) * countTools;
             textBoxAllCount_VNS.Text = Convert.ToString(total) + " p.";
-            buttonShopTools_VNS.Text = "В корзине";
-            buttonShopTools_VNS.Enabled = false;
-            buttonMinusTools_VNS.Enabled = false;
-            buttonPlusTools_VNS.Enabled = false;
+
+
         }
 
         private void buttonShopPerfor_VNS_Click(object sender, EventArgs e)
@@ -208,15 +215,18 @@ namespace Project.V10
             string[,] arrayValues = new string[rows, columns];
             arrayValues = ds.LoadFromData(openfile);
             string Perfor = arrayValues[1, 0] + "\t\t\t\t\t\t\t\t\t" + Convert.ToString(Convert.ToInt32(arrayValues[1, 1])) + " pуб"
-                + "\t\t\t\t\t\t" + Convert.ToString(countPerfor) + " шт." + "\t\t\t\t\t\t\t\t" + Convert.ToString(Convert.ToInt32(arrayValues[2, 1]) * countPerfor) + "руб";
+                + "\t\t\t\t\t\t" + Convert.ToString(countPerfor) + " шт." + "\t\t\t\t\t\t\t\t" + Convert.ToString(Convert.ToInt32(arrayValues[1, 1]) * countPerfor) + "руб";
             richTextBoxList_VNS.Text += "\n\t" + Perfor + "\n";
             products += arrayValues[1, 0] + " " + Convert.ToString(countPerfor) + " шт.  ";
-            total += Convert.ToInt32(arrayValues[1, 1]) * countPerfor;
-            textBoxAllCount_VNS.Text = Convert.ToString(total) + " p.";
+            
             buttonShopPerfor_VNS.Text = "В корзине";
-            buttonShopPerfor_VNS.Enabled = false;
-            buttonMinusPerfor_VNS.Enabled = false;
-            buttonPlusPerfor_VNS.Enabled = false;
+            shopCount = textBoxShopCount_VNS.Text;
+            shopCount = Convert.ToString(countPerfor + countTools + countBosch);
+            textBoxShopCount_VNS.Text = shopCount;
+            int perforsindex = richTextBoxList_VNS.Lines.Length;
+            total = Convert.ToInt32(arrayValues[2, 1]) * countBosch + Convert.ToInt32(arrayValues[1, 1]) * countPerfor + Convert.ToInt32(arrayValues[0, 1]) * countTools;
+            textBoxAllCount_VNS.Text = Convert.ToString(total) + " p.";
+
         }
 
         private void buttonShopBosch_VNS_Click(object sender, EventArgs e)
@@ -229,14 +239,17 @@ namespace Project.V10
             string Bosch = arrayValues[2, 0] + "\t\t\t\t\t\t\t\t\t\t" + Convert.ToString(Convert.ToInt32(arrayValues[2, 1])) + " pуб"
                 + "\t\t\t\t\t\t" + Convert.ToString(countBosch) + " шт." + "\t\t\t\t\t\t\t\t" + Convert.ToString(Convert.ToInt32(arrayValues[2, 1]) * countBosch) + "руб";
             richTextBoxList_VNS.Text += "\n\t" + Bosch + "\n";
-            products += arrayValues[2, 0] + " " + Convert.ToString(countBosch) + " шт.  ";
-            total += Convert.ToInt32(arrayValues[2, 1]) * countBosch;
+            products += arrayValues[2, 0] + " " + Convert.ToString(countBosch) + " шт.  ";         
+            shopCount = textBoxShopCount_VNS.Text;
+            shopCount = Convert.ToString(countPerfor + countTools + countBosch);
+            textBoxShopCount_VNS.Text = shopCount;
+            countShop++;
+            total = Convert.ToInt32(arrayValues[2, 1]) * countBosch + Convert.ToInt32(arrayValues[1, 1]) * countPerfor + Convert.ToInt32(arrayValues[0, 1]) * countTools;
             textBoxAllCount_VNS.Text = Convert.ToString(total) + " p.";
-            buttonShopBosch_VNS.Text = "В корзине";
-            buttonShopBosch_VNS.Enabled = false;
-            buttonMinusBosch_VNS.Enabled = false;
-            buttonPlusBosch_VNS.Enabled = false;
+
         }
+          
+
 
         private void buttonOrder_VNS_Click(object sender, EventArgs e)
         {
@@ -245,5 +258,6 @@ namespace Project.V10
             richTextBoxList_VNS.Text = "";
             textBoxAllCount_VNS.Text = "";
         }
+
     }
 }

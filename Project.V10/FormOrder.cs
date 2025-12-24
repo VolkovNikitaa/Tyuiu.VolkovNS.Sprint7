@@ -61,7 +61,6 @@ namespace Project.V10
             string[] inforegister = new string[] { surname, name, middlename, address, num, pay, totalSum, productsOrder };
             saveFileDialog_VNS.FileName = "Информация о заказах.csv";
             saveFileDialog_VNS.InitialDirectory = @"C: \Users\Nikita\Documents\project";
-            saveFileDialog_VNS.ShowDialog();
 
             string path = saveFileDialog_VNS.FileName;
             int columns = 8;

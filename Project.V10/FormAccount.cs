@@ -25,7 +25,8 @@ namespace Project.V10
 
         private void buttonOK_VNS_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            FormGrad grad = new FormGrad();
+            grad.ShowDialog();
         }
     }
 }

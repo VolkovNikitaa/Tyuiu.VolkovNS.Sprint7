@@ -161,7 +161,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackColor = SystemColors.ButtonShadow;
             ClientSize = new Size(758, 546);
             Controls.Add(buttonOK_VNS);
             Controls.Add(labelTime_VNS);

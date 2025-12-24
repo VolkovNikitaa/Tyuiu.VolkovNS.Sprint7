@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             buttonCatalog_VNS = new Button();
             labelMarket_VNS = new Label();
@@ -36,6 +37,7 @@
             labelHelp_VNS = new Label();
             textBoxHello_VNS = new TextBox();
             pictureBox1 = new PictureBox();
+            toolTip1 = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -58,57 +60,63 @@
             // 
             labelMarket_VNS.Anchor = AnchorStyles.Top;
             labelMarket_VNS.AutoSize = true;
-            labelMarket_VNS.BackColor = Color.FromArgb(255, 192, 192);
-            labelMarket_VNS.Font = new Font("Century Gothic", 20F, FontStyle.Bold);
+            labelMarket_VNS.BackColor = SystemColors.ButtonShadow;
+            labelMarket_VNS.Font = new Font("Century Gothic", 24F, FontStyle.Bold);
             labelMarket_VNS.Location = new Point(456, 23);
             labelMarket_VNS.Name = "labelMarket_VNS";
-            labelMarket_VNS.Size = new Size(420, 40);
+            labelMarket_VNS.Size = new Size(494, 47);
             labelMarket_VNS.TabIndex = 1;
             labelMarket_VNS.Text = "Магазин инструментов";
             // 
             // labelAboutUs_VNS
             // 
             labelAboutUs_VNS.AutoSize = true;
-            labelAboutUs_VNS.BackColor = Color.FromArgb(255, 192, 192);
+            labelAboutUs_VNS.BackColor = SystemColors.ButtonShadow;
+            labelAboutUs_VNS.BorderStyle = BorderStyle.FixedSingle;
             labelAboutUs_VNS.FlatStyle = FlatStyle.Popup;
             labelAboutUs_VNS.Font = new Font("Century Gothic", 18F, FontStyle.Bold);
             labelAboutUs_VNS.Location = new Point(242, 101);
             labelAboutUs_VNS.Name = "labelAboutUs_VNS";
-            labelAboutUs_VNS.Size = new Size(107, 37);
+            labelAboutUs_VNS.Size = new Size(109, 39);
             labelAboutUs_VNS.TabIndex = 2;
             labelAboutUs_VNS.Text = "О нас";
+            toolTip1.SetToolTip(labelAboutUs_VNS, "В этом разделе вы найдёте всю\r\nинформацию о нашем магазине");
             labelAboutUs_VNS.Click += labelAboutUs_VNS_Click;
             // 
             // labelDelivery_VNS
             // 
             labelDelivery_VNS.Anchor = AnchorStyles.Top;
             labelDelivery_VNS.AutoSize = true;
-            labelDelivery_VNS.BackColor = Color.FromArgb(255, 192, 192);
+            labelDelivery_VNS.BackColor = SystemColors.ButtonShadow;
+            labelDelivery_VNS.BorderStyle = BorderStyle.FixedSingle;
             labelDelivery_VNS.Font = new Font("Century Gothic", 18F, FontStyle.Bold);
             labelDelivery_VNS.Location = new Point(601, 101);
             labelDelivery_VNS.Name = "labelDelivery_VNS";
-            labelDelivery_VNS.Size = new Size(166, 37);
+            labelDelivery_VNS.Size = new Size(168, 39);
             labelDelivery_VNS.TabIndex = 3;
             labelDelivery_VNS.Text = "Доставка";
+            toolTip1.SetToolTip(labelDelivery_VNS, "В этом разделе вы найдёте всю информацию\r\nо доставке из нашего магазина");
             labelDelivery_VNS.Click += labelDelivery_VNS_Click;
             // 
             // labelHelp_VNS
             // 
             labelHelp_VNS.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             labelHelp_VNS.AutoSize = true;
-            labelHelp_VNS.BackColor = Color.FromArgb(255, 192, 192);
+            labelHelp_VNS.BackColor = SystemColors.ButtonShadow;
+            labelHelp_VNS.BorderStyle = BorderStyle.FixedSingle;
             labelHelp_VNS.Font = new Font("Century Gothic", 18F, FontStyle.Bold);
             labelHelp_VNS.Location = new Point(920, 101);
             labelHelp_VNS.Name = "labelHelp_VNS";
-            labelHelp_VNS.Size = new Size(150, 37);
+            labelHelp_VNS.Size = new Size(152, 39);
             labelHelp_VNS.TabIndex = 4;
             labelHelp_VNS.Text = "Справка";
+            toolTip1.SetToolTip(labelHelp_VNS, "В этом разделе вы найдёте всю\r\nинформацию об это приложении\r\n");
             labelHelp_VNS.Click += labelHelp_VNS_Click;
             // 
             // textBoxHello_VNS
             // 
             textBoxHello_VNS.Anchor = AnchorStyles.None;
-            textBoxHello_VNS.BackColor = Color.FromArgb(255, 192, 192);
+            textBoxHello_VNS.BackColor = SystemColors.ButtonShadow;
             textBoxHello_VNS.BorderStyle = BorderStyle.FixedSingle;
             textBoxHello_VNS.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
             textBoxHello_VNS.Location = new Point(298, 213);
@@ -130,12 +138,15 @@
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
+            // toolTip1
+            // 
+            toolTip1.ToolTipTitle = "Подсказка";
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GrayText;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackColor = SystemColors.ButtonShadow;
             ClientSize = new Size(1276, 855);
             Controls.Add(labelAboutUs_VNS);
             Controls.Add(pictureBox1);
@@ -163,5 +174,6 @@
         private Label labelHelp_VNS;
         private TextBox textBoxHello_VNS;
         private PictureBox pictureBox1;
+        private ToolTip toolTip1;
     }
 }

@@ -64,10 +64,12 @@
             panelTools_VNS = new Panel();
             panelPerfor_VNS = new Panel();
             panelBosch_VNS = new Panel();
+            textBoxShopCount_VNS = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBoxTools_VNS).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPerfor_VNS).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBosch_VNS).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxShopList_VNS).BeginInit();
+            panelBosch_VNS.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBoxTools_VNS
@@ -101,7 +103,7 @@
             pictureBoxBosch_VNS.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             pictureBoxBosch_VNS.BackColor = Color.FromArgb(255, 128, 128);
             pictureBoxBosch_VNS.Image = (Image)resources.GetObject("pictureBoxBosch_VNS.Image");
-            pictureBoxBosch_VNS.Location = new Point(1016, 225);
+            pictureBoxBosch_VNS.Location = new Point(11, 129);
             pictureBoxBosch_VNS.Name = "pictureBoxBosch_VNS";
             pictureBoxBosch_VNS.Size = new Size(380, 311);
             pictureBoxBosch_VNS.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -465,17 +467,29 @@
             // 
             panelBosch_VNS.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             panelBosch_VNS.BackColor = Color.FromArgb(255, 128, 128);
+            panelBosch_VNS.Controls.Add(pictureBoxBosch_VNS);
             panelBosch_VNS.Location = new Point(1005, 96);
             panelBosch_VNS.Name = "panelBosch_VNS";
             panelBosch_VNS.Size = new Size(405, 612);
             panelBosch_VNS.TabIndex = 29;
             // 
+            // textBoxShopCount_VNS
+            // 
+            textBoxShopCount_VNS.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            textBoxShopCount_VNS.BackColor = Color.Red;
+            textBoxShopCount_VNS.Location = new Point(1361, 12);
+            textBoxShopCount_VNS.Name = "textBoxShopCount_VNS";
+            textBoxShopCount_VNS.Size = new Size(35, 27);
+            textBoxShopCount_VNS.TabIndex = 35;
+            textBoxShopCount_VNS.Text = "0";
+            // 
             // FormCatalog
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackColor = SystemColors.ButtonShadow;
             ClientSize = new Size(1455, 940);
+            Controls.Add(textBoxShopCount_VNS);
             Controls.Add(buttonOrder_VNS);
             Controls.Add(buttonShopBosch_VNS);
             Controls.Add(buttonShopPerfor_VNS);
@@ -498,16 +512,15 @@
             Controls.Add(buttonMinusPerfor_VNS);
             Controls.Add(buttonPlusTools_VNS);
             Controls.Add(buttonMinusTools_VNS);
-            Controls.Add(labelBosch_VNS);
             Controls.Add(labelPerfor_VNS);
             Controls.Add(labelTools_VNS);
-            Controls.Add(pictureBoxBosch_VNS);
             Controls.Add(pictureBoxPerfor_VNS);
             Controls.Add(pictureBoxTools_VNS);
             Controls.Add(panelTools_VNS);
-            Controls.Add(richTextBoxList_VNS);
             Controls.Add(panelPerfor_VNS);
+            Controls.Add(labelBosch_VNS);
             Controls.Add(panelBosch_VNS);
+            Controls.Add(richTextBoxList_VNS);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormCatalog";
             Text = "Каталог";
@@ -517,6 +530,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxPerfor_VNS).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBosch_VNS).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxShopList_VNS).EndInit();
+            panelBosch_VNS.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -557,5 +571,6 @@
         private Panel panelTools_VNS;
         private Panel panelPerfor_VNS;
         private Panel panelBosch_VNS;
+        private TextBox textBoxShopCount_VNS;
     }
 }

@@ -51,7 +51,7 @@
             // 
             // panel1
             // 
-            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackColor = SystemColors.ButtonShadow;
             panel1.Controls.Add(labelTopic_VNS);
             panel1.Location = new Point(-20, 0);
             panel1.Name = "panel1";
@@ -187,12 +187,13 @@
             // 
             // buttonCreateOrder_VNS
             // 
+            buttonCreateOrder_VNS.BackColor = SystemColors.ButtonShadow;
             buttonCreateOrder_VNS.Location = new Point(574, 581);
             buttonCreateOrder_VNS.Name = "buttonCreateOrder_VNS";
             buttonCreateOrder_VNS.Size = new Size(150, 47);
             buttonCreateOrder_VNS.TabIndex = 20;
             buttonCreateOrder_VNS.Text = "Оформить заказ";
-            buttonCreateOrder_VNS.UseVisualStyleBackColor = true;
+            buttonCreateOrder_VNS.UseVisualStyleBackColor = false;
             buttonCreateOrder_VNS.Click += buttonCreateOrder_VNS_Click;
             // 
             // FormOrder
